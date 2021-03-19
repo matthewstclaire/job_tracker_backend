@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+post '/login', to:"sessions#login"
+post '/autologin', to:"sessions#login"
+
+  get 'sessions/login'
+  get 'sessions/autologin'
     resources :users do
     resources :questions
   end

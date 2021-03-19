@@ -9,9 +9,9 @@
 Job.destroy_all
 User.destroy_all
 
-User.create(name: "Jack")
-User.create(name: "Gracie")
-User.create(name: "Wang")
+User.create(username: "Jack", password: "123")
+User.create(username: "Gracie", password: "123")
+User.create(username: "Wang", password: "123")
 
 # Job Schema
 # t.string "title"
