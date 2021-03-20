@@ -16,7 +16,8 @@ class UsersController < ApplicationController
   # POST /users
   def create
     user = User.create(user_params)
-    render json: {user: UserSerializer.new(user), token: "Dis a token"}
+    token = encode_token(user.id)
+    render json: {user: UserSerializer.new(user), token: token}
     # @user = User.new(user_params)
 
     # if @user.save
