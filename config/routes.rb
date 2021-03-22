@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 post '/login', to:"sessions#login"
 post '/autologin', to:"sessions#login"
 
-# resources :users do
-# resources :jobs
-# end
+resources :users do
+resources :jobs
+end
 
 resources :jobs
 resources :users
