@@ -17,4 +17,5 @@ class ApplicationController < ActionController::API
       User.find_by_id(decode_token[0]["user_id"])
     end
   
+
   end

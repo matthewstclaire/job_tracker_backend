@@ -7,6 +7,10 @@ class JobsController < ApplicationController
     render json: @jobs
   end
 
+#   def index
+#     @jobs = Job.where(:user_id => logged_in_user.id)
+# end
+
   # GET /jobs/1
   def show
     render json: @job
@@ -14,12 +18,15 @@ class JobsController < ApplicationController
 
   # POST /jobs
   def create
-    @job = Job.new(job_params)
-    if @job.save
-      render json: @job, status: :created, location: @job
-    else
-      render json: @job.errors, status: :unprocessable_entity
-    end
+    # byebug
+    job = logged_in_user.jobs.create(job_params)
+    render json: job
+    # @job = Job.new(job_params)
+    # if @job.save
+    #   render json: @job, status: :created, location: @job
+    # else
+    #   render json: @job.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /jobs/1
@@ -44,6 +51,6 @@ class JobsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def job_params
-      params.require(:job).permit(:title, :date_applied, :company, :next_steps, :interest, :open, :applied_on)
+      params.permit(:id, :title, :date_applied, :company, :next_steps, :interest, :open, :applied_on)
     end
 end
