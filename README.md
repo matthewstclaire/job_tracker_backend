@@ -7,7 +7,7 @@
 https://github.com/matthewstclaire/job_tracker_frontend
 
 ## Install Instructions
-To run this server you will need to clone it and then run `rails s` in your console. 
+To run this server you will need to clone it and then run `rails s` in your console. Open your browser and navigate to `https:localhost:3000` to begin a session.
 
 ## License
 This database is available as open source under the terms of the MIT License.
