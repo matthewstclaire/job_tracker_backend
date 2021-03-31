@@ -1,24 +1,13 @@
-# README
+# Tiger Tracker - Job Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+ This is my final project for Flatiron. It uses a React frontend using Redux for state management. There is basic user authentication along with reading and creating capabilities. There are many more plans for this application including eventual deployment! 
 
-Things you may want to cover:
+#### To access the React Frontend you will need to follow this link and run the server according to the instructions. 
+https://github.com/matthewstclaire/job_tracker_frontend
 
-* Ruby version
+## Install Instructions
+To run this server you will need to clone it and then run `rails s` in your console. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+This database is available as open source under the terms of the MIT License.
